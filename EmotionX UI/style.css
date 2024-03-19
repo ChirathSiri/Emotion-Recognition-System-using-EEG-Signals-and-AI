@@ -1,0 +1,246 @@
+/* Global Styles */
+body {
+ font-family: 'Open Sans', sans-serif; /* Consider using a more visually appealing font */
+ background-image: url("log3.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ margin: 0;
+}
+
+header {
+ background-color: rgba(0, 0, 0, 0.5);
+ color: #fff;
+ padding: 20px;
+ text-align: center;
+ font-size: 1.5em;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle header border */
+}
+
+h1 {
+ margin-top: 0;
+ text-align: center;
+ font-size: 2.5em;
+ font-weight: 700;
+ color: #fff;
+ text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+ letter-spacing: 1px; /* Slightly spread out letters for visual interest */
+}
+
+#login-container {
+ background-color: #e5f4fc; /* Light blue for a calming base */
+ padding: 40px; /* Increased padding for spaciousness */
+ border-radius: 50px; /* Extremely rounded corners for a soft, inviting look */
+ box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for visual depth */
+ margin: 60px auto; /* Increased margin for better breathing room */
+ max-width: 400px;
+ transition: all 0.3s ease-in-out;
+ background-image: linear-gradient(to bottom right, #e5f4fc, #cfe2f3); /* Subtle gradient for texture */
+ border: 2px solid #95c4e8; /* Thin border in a complementary blue */
+}
+
+#login-container:hover {
+ box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3); /* Darker shadow on hover for emphasis */
+ transform: translateY(-10px); /* More pronounced lift on hover for interaction */
+ border-color: #7db9e5; /* Brighter border on hover for focus */
+}
+
+.user-icon { /* Assuming you've assigned an ID to the icon's container */
+  width: 55px; /* Adjust width as needed */
+  height: 55px; /* Adjust height as needed */
+  margin-right: 10px; /* Adjust spacing as needed */
+  vertical-align: middle; /* Align vertically with text */
+  margin-bottom: 20px;
+  display: inline-block; /* If needed */
+  border-radius: 50%; /* Adjust to your desired curve */
+  overflow: hidden; /* Clip anything outside the border */
+}
+
+/* Example CSS for styling a font icon from a library like Font Awesome */
+.user-icon .fa-user { /* Assuming you're using Font Awesome */
+font-size: 1.5em;
+  color: #007bff;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative; /* Position relative to the container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the icon within the container */
+}
+
+.forgot-password{
+	vertical-align: middle; /* Align vertically with text */
+    display: inline-block; /* Allow line-by-line alignment */
+	margin-bottom: -90px;
+}
+
+.create-account{
+	vertical-align: middle; /* Align vertically with text */
+    display: inline-block; /* Allow line-by-line alignment */
+	margin-bottom: -90px;
+}
+
+/* Input fields */
+#Username {
+ border-radius: 20px; /* Curved edges for inputs */
+ border: 2px solid #ccc; /* Slightly thicker border */
+ box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+ transition: all 0.2s ease-in-out; /* Added transition for smoother effects */
+}
+
+#Username:focus {
+ border-color: #28a745; /* Green border on focus */
+ box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.15); /* Stronger inner shadow on focus */
+ outline: none; /* Remove default outline */
+}
+
+#Password {
+ border-radius: 20px; /* Curved edges for inputs */
+ border: 2px solid #ccc; /* Slightly thicker border */
+ box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+ transition: all 0.2s ease-in-out; /* Added transition for smoother effects */
+}
+
+#Password:focus {
+ border-color: #28a745; /* Green border on focus */
+ box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.15); /* Stronger inner shadow on focus */
+ outline: none; /* Remove default outline */
+}
+
+#Submit_Button{border-radius: 30px; /* Curved edges for button */
+ background-color: #007bff; /* Primary color */
+ font-weight: 700; /* Bolder text */
+ box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
+ transition: all 0.2s ease-in-out; /* Added transition for smoother effects */
+}
+
+#Submit_Button:hover {
+ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+ transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+h2 {
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+label {
+ display: block;
+ margin-bottom: 5px;
+ font-weight: 600; /* Bolder labels for better readability */
+}
+
+input[type="text"],
+input[type="password"] {
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ width: 100%;
+ margin-bottom: 10px;
+ transition: all 0.2s ease-in-out; /* Add transitions for smoother input focus effects */
+}
+
+
+/* Validation styles */
+input:valid {
+ border-color: #28a745; /* Green for valid */
+}
+
+input:invalid {
+ border-color: #dc3545; /* Red for invalid */
+}
+
+#Submit_Button {
+ background-color: #007bff;
+ color: white;
+ padding: 10px 20px;
+ border: none;
+ cursor: pointer;
+ border-radius: 30px;
+ box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
+ transition: all 0.2s ease-in-out; /* Smoother visual changes */
+ animation: pulse 1s infinite; /* Subtle pulse animation on hover */
+}
+
+
+/* Main Content */
+main {
+ background-color: #fff;
+ padding: 30px;
+ border-radius: 10px;
+ box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+ margin-top: 20px;
+}
+
+h2 {
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+@keyframes pulse {
+ 0% {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+ }
+ 50% {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+ }
+ 100% {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+ }
+}
+
+.error-popup {
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ padding: 30px; /* Increased padding for spaciousness */
+ border-radius: 20px; /* Softer, rounded corners */
+ box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.4); /* Deeper, more prominent shadow */
+ opacity: 0;
+ visibility: hidden;
+ transition: opacity 0.3s ease-in-out;
+ background: linear-gradient(to bottom right, #6f5499, #a83279); /* Colorful, eye-catching gradient */
+ font-family: 'Raleway', sans-serif; /* Modern, elegant font */
+ color: #fff; /* Consistent white text for contrast */
+}
+
+.error-popup.show {
+ opacity: 1;
+ visibility: visible;
+}
+
+.error-popup h2 {
+ margin-top: 0;
+ font-size: 1.6em; /* Larger header for emphasis */
+ font-weight: 800;
+ text-align: center;
+ color: #fff; /* White text for contrast */
+}
+
+.error-popup p {
+ font-size: 1.1em; /* Slightly larger text for readability */
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.error-popup button {
+ background-color: #04a7d0; /* Bright blue button for a positive feel */
+ color: #fff;
+ padding: 15px 30px; /* Generous button padding */
+ border: none;
+ border-radius: 10px;
+ cursor: pointer;
+ text-transform: uppercase;
+ font-weight: bold;
+}
