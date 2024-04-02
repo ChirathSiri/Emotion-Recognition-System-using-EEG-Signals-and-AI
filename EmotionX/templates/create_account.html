@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create_account.css') }}">
+    <script>
+        // Function to generate a random 4-digit number
+        function generateRandomNumber() {
+            return Math.floor(1000 + Math.random() * 9000);
+        }
+
+        // Function to set the generated number as the value of the User ID field
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('user_id').value = generateRandomNumber();
+        });
+    </script>
+</head>
+
+<header>
+    <h1>Emotion X</h1>
+</header>
+<body>
+<nav>
+    <a href="{{ url_for('login') }}" id="ic">Back to Login<i class="fas fa-user-plus"></i></a>
+</nav>
+<header>
+    <h2>Create Account</h2>
+</header>
+<main>
+    <div id="form-container">
+        <form id="create-account-form" action="{{ url_for('create') }}" method="post">
+            <input type="text" id="user_id" name="user_id" placeholder="User ID" required readonly>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Create Account</button>
+            {% if error %}
+            <p id="error-message">{{ error }}</p>
+            {% endif %}
+
+            {% if message %}
+            <p id="message">{{ message }}</p>
+            {% endif %}
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2024 Emotion Recognition System
+    </footer>
+
+    <script>
+        // Get the error message element
+        var errorMessage = document.getElementById('error-message');
+
+        // Check if error message exists
+        if (errorMessage) {
+            // Hide the error message after 5 seconds
+            setTimeout(function () {
+                errorMessage.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+    <script>
+        var message = document.getElementById('message');
+
+        // Check if error message exists
+        if (message) {
+            // Hide the error message after 5 seconds
+            setTimeout(function () {
+                message.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

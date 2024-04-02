@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emotion Recognition System - EEG</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <header>
+  <h1>Emotion Recognition System</h1>
+ </header>
+
+    <form id="login-form">
+        <input type="text" id="username" name="username" placeholder="Username">
+        <input type="password" id="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const usernameInput = document.getElementById("username");
+        const passwordInput = document.getElementById("password");
+
+        loginForm.addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            // Send AJAX request to login.php
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "login.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    const response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        // Login successful, redirect to main page
+                        window.location.href = "main-age.html";
+                    } else {
+                        // Login failed, display error message
+                        alert("Invalid username or password. Please try again.");
+                    }
+                }
+            };
+            xhr.send("username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password));
+        });
+    </script>
+</body>
+</html>

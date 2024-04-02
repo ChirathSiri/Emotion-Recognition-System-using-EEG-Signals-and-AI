@@ -1,0 +1,22 @@
+      <a href="#" class="forgot-password">Forgot password?</a>
+      <a href="#" class="create-account">Create an account</a>
+	  
+	  <img src="user.jpg" alt="User Icon" class="user-icon"> <form id="login-form">
+	  
+	  <main id="main-content" style="display: none;">
+	  
+	  .user-icon { /* Assuming you've assigned an ID to the icon's container */
+	    width: 25px; /* Adjust width as needed */
+	    height: 25px; /* Adjust height as needed */
+	    margin-right: 10px; /* Adjust spacing as needed */
+	    vertical-align: middle; /* Align vertically with text */
+	  }
+
+	  /* Example CSS for styling a font icon from a library like Font Awesome */
+	  .user-icon .fa-user { /* Assuming you're using Font Awesome */
+	    font-size: 1.5em; /* Adjust font size as needed */
+	    color: #007bff; /* Adjust color as needed */
+	  }
+	  
+	  
+	  
