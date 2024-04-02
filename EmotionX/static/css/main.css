@@ -1,0 +1,123 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("../log3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Increased opacity for better readability */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold; /* Added bold font weight for better emphasis */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Increased border thickness for better visibility */
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Increased shadow opacity */
+  letter-spacing: 1px; /* Slightly spread out letters for visual interest */
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center; /* Centered navigation links */
+  padding: 10px;
+  border-bottom: 2px solid #55a7ff;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 10px 20px; /* Increased padding for better clickability */
+}
+
+nav a:hover {
+  color: #55a7ff;
+}
+
+main {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  background: linear-gradient(to right, #333, #444);
+  color: #fff;
+  line-height: 1.6;
+  font-size: 20px; /* Adjusted font size */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 10px; /* Increased margin for better separation */
+  border-radius: 8px;
+  padding: 15px; /* Increased padding for better readability */
+  text-align: justify; /* Justify text */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  background: linear-gradient(to right, #333, #444);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #87ceeb, #4682b4);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+li:hover {
+  background: white;
+  color: #55a7ff;
+}
+
+#Button {
+  background: linear-gradient(to right, #2c6dfb, #55a7ff);
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px; /* Increased padding for better clickability */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px; /* Adjusted font size */
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 10px auto; /* Reduced margin for better spacing */
+  width: fit-content; /* Adjusted width based on content */
+}
+
+#Button:hover {
+  background: linear-gradient(to right, #333, #444);
+  color: #55a7ff;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px; /* Increased padding for better spacing */
+  text-align: center;
+}

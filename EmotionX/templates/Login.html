@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Emotion Recognition System - EEG</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+<!--    <script>-->
+<!--        window.onload = function () {-->
+<!--            window.history.forward();-->
+<!--            document.querySelector("body").addEventListener("keydown", function (e) {-->
+<!--                if (e.keyCode === 37 || e.keyCode === 39) {-->
+<!--                    e.preventDefault();-->
+<!--                    return false;-->
+<!--                }-->
+<!--            });-->
+<!--        }-->
+<!--    </script>-->
+</head>
+<body>
+<header>
+    <h1>Emotion X</h1>
+</header>
+
+<div id="login-container">
+    <h2>Login</h2>
+    <img alt="User Icon" class="user-icon" src="{{ url_for('static', filename='user.jpg')}}">
+    <form action="{{ url_for('login') }}" id="login-form" method="post"> <!-- Specify action attribute -->
+        <label for="username">Username:</label>
+        <input id="Username" name="username" required type="text"> <!-- Changed id to name -->
+        <label for="password">Password:</label>
+        <input id="Password" name="password" required type="password"> <!-- Changed id to name -->
+        <button id="Submit_Button" type="submit">Login</button>
+        <a class="forgot-password" href="{{ url_for('forgot') }}">Forgot password?</a>
+        <a class="create-account" href="{{ url_for('create') }}">Create an account</a>
+        {% if error %}
+        <p id="error-message">{{ error }}</p>
+        {% endif %}
+    </form>
+</div>
+
+<main id="main-content" style="display: none;">
+</main>
+
+<footer>
+    &copy; 2024 Emotion Recognition System
+</footer>
+
+<script>
+    // Get the error message element
+    var errorMessage = document.getElementById('error-message');
+
+    // Check if error message exists
+    if (errorMessage) {
+        // Hide the error message after 5 seconds
+        setTimeout(function () {
+            errorMessage.style.display = 'none';
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
